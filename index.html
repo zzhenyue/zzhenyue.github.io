@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jack Chao</title>
+  <meta name="description" content="Jack Chao — Computational Social Science / AI for science" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/profile.jpg" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-identity">
+      <a href="/" class="site-title">Zhenyue Zhao</a>
+      <p class="site-tagline">Computational Social Science / AI for science</p>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">☰ Menu</button>
+      <ul id="nav-menu" class="nav-menu">
+        <li><a href="/">Home</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="cv.html">CV</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main" class="content">
+    <section class="hero">
+      <img src="assets/img/profile.jpg" alt="Portrait of Jack Chao" class="hero-portrait" />
+      <h1>Hi, I'm Jack Chao.</h1>
+      <p class="lead">I study how people, ideas, and technologies connect — and how we can use AI to accelerate scientific discovery.</p>
+    </section>
+
+    <section class="home-bio">
+      <h2>About Me</h2>
+      <p>I am a computational social scientist working at the intersection of scholarly communication, bibliometrics, and AI-for-science tooling. My research spans large-scale analysis of publication and citation networks, topic emergence detection, and building machine learning systems that help researchers navigate scientific literature at scale.</p>
+      <p>Recent work includes clustering millions of scholarly records across heterogeneous data sources (Semantic Scholar, OpenAlex, PubMed, Dimensions), modeling the uptake of advanced AI tools (e.g., protein structure prediction systems) across research communities, and designing recommendation systems that infer emerging collaborations and material science trajectories.</p>
+      <p>Broadly, I'm interested in how data traces of science can feed back into better tools, better decisions, and faster discovery.</p>
+      <p><strong>Status:</strong> This website is new and under active development—check back soon for more publications, datasets, and code releases.</p>
+    </section>
+
+    <section class="home-contact">
+      <h2>Get in Touch</h2>
+      <ul class="contact-list">
+        <li>Email: <a href="mailto:jack.chao@example.edu">jack.chao@example.edu</a> <!-- TODO: replace with real email; consider obfuscation -->
+        </li>
+        <li>Google Scholar: <a href="https://scholar.google.com/citations?user=YOUR_SCHOLAR_ID" rel="noopener" target="_blank">Scholar Profile</a> <!-- TODO -->
+        </li>
+        <li>LinkedIn: <a href="https://www.linkedin.com/in/YOUR-LINKEDIN-HANDLE" rel="noopener" target="_blank">LinkedIn</a> <!-- TODO -->
+        </li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Jack Chao. Built with plain HTML + CSS. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+  // Simple mobile nav toggle
+  (function(){
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    btn.addEventListener('click', function(){
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open');
+    });
+  })();
+  // Auto-year in footer
+  document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
