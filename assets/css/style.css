@@ -152,9 +152,9 @@ body {
 .hero-portrait {
   width: 160px;
   height: 160px;
-  border-radius: 50%;
+  border-radius: 0; /* square */
   margin: 0 auto var(--space-md) auto;
-  object-fit: cover;
+  object-fit: cover; /* keeps the crop centered if your source isn't square */
   border: 2px solid var(--border);
 }
 .lead {
