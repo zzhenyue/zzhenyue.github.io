@@ -1,0 +1,195 @@
+/* =============================
+   Jack Chao Personal Site CSS
+   Simple, responsive, theme-free
+   ============================= */
+
+/* CSS Reset-ish */
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+body { margin: 0; line-height: 1.5; -webkit-font-smoothing: antialiased; }
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--accent); text-decoration: none; }
+a:hover, a:focus { text-decoration: underline; }
+
+:root {
+  --font-body: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --max-width: 760px;
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 2rem;
+  --radius: 6px;
+  --accent: #005bd1;
+  --accent-hover: #0040a0;
+
+  /* Light theme colors */
+  --bg: #ffffff;
+  --bg-alt: #f5f5f7;
+  --text: #1a1a1a;
+  --text-muted: #555555;
+  --border: #dddddd;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #121212;
+    --bg-alt: #1e1e1e;
+    --text: #e0e0e0;
+    --text-muted: #a0a0a0;
+    --border: #333333;
+    --accent: #4c8dff;
+    --accent-hover: #8cb3ff;
+  }
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--bg);
+  color: var(--text);
+  font-size: 1rem;
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+  top: -1000px;
+  background: var(--accent);
+  color: #fff;
+  padding: var(--space-sm) var(--space-md);
+  border-radius: var(--radius);
+}
+.skip-link:focus {
+  left: var(--space-md);
+  top: var(--space-md);
+  z-index: 1000;
+}
+
+.site-header {
+  border-bottom: 1px solid var(--border);
+  padding: var(--space-md) var(--space-md) 0 var(--space-md);
+}
+.site-identity {
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+.site-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--text);
+}
+.site-tagline {
+  margin: 0;
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
+
+/* Nav */
+.site-nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  position: relative;
+}
+.nav-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--border);
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: var(--radius);
+  font-size: 1rem;
+  cursor: pointer;
+}
+.nav-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: var(--space-md);
+}
+.nav-menu.is-open { display: block; }
+.nav-menu li { margin: 0; }
+.nav-menu a {
+  padding: var(--space-sm) var(--space-xs);
+  border-radius: var(--radius);
+}
+.nav-menu a.is-current {
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* Mobile nav breakpoint */
+@media (max-width: 600px) {
+  .nav-toggle { display: block; }
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background: var(--bg-alt);
+    padding: var(--space-md);
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+  }
+  .nav-menu li { margin-bottom: var(--space-sm); }
+  .nav-menu li:last-child { margin-bottom: 0; }
+}
+
+.content {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: var(--space-lg) var(--space-md);
+}
+
+.hero {
+  text-align: center;
+  margin-bottom: var(--space-lg);
+}
+.hero-portrait {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  margin: 0 auto var(--space-md) auto;
+  object-fit: cover;
+  border: 2px solid var(--border);
+}
+.lead {
+  font-size: 1.25rem;
+  color: var(--text-muted);
+}
+
+.home-bio p {
+  margin-bottom: var(--space-md);
+}
+
+.home-contact ul { list-style: none; padding: 0; margin: 0; }
+.home-contact li { margin-bottom: var(--space-sm); }
+
+.research-item { margin-bottom: var(--space-lg); }
+.research-item h2 { margin-bottom: var(--space-sm); }
+.research-item p { margin-top: 0; }
+
+.pub-list {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.pub-list li { margin-bottom: var(--space-sm); }
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 var(--space-lg) 0;
+}
+.contact-list li { margin-bottom: var(--space-sm); }
+
+.site-footer {
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: var(--space-lg) var(--space-md);
+  font-size: 0.875rem;
+  color: var(--text-muted);
+}
