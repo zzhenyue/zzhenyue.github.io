@@ -365,6 +365,19 @@ a:hover, a:focus {
 .pub-list strong { color: var(--text); font-weight: 600; }
 .pub-list .pub-authors { color: var(--text-soft); font-size: 0.95rem; }
 .pub-list .pub-venue { color: var(--text-muted); font-size: 0.9rem; }
+.pub-list .pub-me { color: var(--text); font-weight: 700; }
+.pub-list .pub-corresponding {
+  color: var(--accent);
+  font-weight: 700;
+  margin-left: 1px;
+}
+.pub-note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-top: var(--space-md);
+  font-style: italic;
+}
+.pub-note sup { color: var(--accent); font-weight: 700; }
 
 hr {
   border: none;
