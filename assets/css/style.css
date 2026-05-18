@@ -344,17 +344,27 @@ a:hover, a:focus {
 .research-item p { margin: 0; }
 
 .pub-list {
-  list-style: none;
-  padding: 0;
+  list-style: decimal;
+  padding-left: 1.5rem;
   margin: 0;
 }
 .pub-list li {
   padding: var(--space-sm) 0;
   border-bottom: 1px solid var(--border);
   color: var(--text-soft);
+  line-height: 1.55;
+}
+.pub-list li::marker {
+  color: var(--text-muted);
+  font-variant-numeric: tabular-nums;
 }
 .pub-list li:last-child { border-bottom: none; }
+.pub-list a { border-bottom: none; }
+.pub-list a:hover strong,
+.pub-list a:focus strong { color: var(--accent); }
 .pub-list strong { color: var(--text); font-weight: 600; }
+.pub-list .pub-authors { color: var(--text-soft); font-size: 0.95rem; }
+.pub-list .pub-venue { color: var(--text-muted); font-size: 0.9rem; }
 
 hr {
   border: none;

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Publications — Zhenyue Zhao</title>
+  <meta name="description" content="Publications and working papers by Zhenyue Zhao: computational social science, science of science, AI for science." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="icon" href="assets/img/mit_ai.jpeg" />
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="site-identity">
+        <a href="/" class="site-title">Zhenyue Zhao</a>
+        <p class="site-tagline">Computational Social Science · AI for Science</p>
+      </div>
+      <nav class="site-nav" aria-label="Primary">
+        <button id="nav-toggle" class="nav-toggle" aria-expanded="false" aria-controls="nav-menu">Menu</button>
+        <ul id="nav-menu" class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a class="is-current" href="publications.html">Publications</a></li>
+          <li><a href="assets/cv.pdf">CV</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="content">
+    <h1>Publications</h1>
+    <p class="page-intro">A full list is available on my <a href="https://scholar.google.com/citations?user=9jOy3v4AAAAJ&hl=en" rel="noopener" target="_blank">Google Scholar profile</a>.</p>
+
+    <section class="section">
+      <div class="section-title"><h2>Selected Working Papers</h2></div>
+      <ol class="pub-list">
+        <li>
+          <a href="https://arxiv.org/abs/2605.07723" rel="noopener" target="_blank"><strong>LLM hallucinations in the wild: Large-scale evidence from non-existent citations</strong></a><br />
+          <span class="pub-authors">Zhenyue Zhao, Yihe Wang, Toby Stuart, Mathijs De Vaan, Paul Ginsparg, Yian Yin</span><br />
+          <span class="pub-venue"><em>arXiv preprint</em> arXiv:2605.07723, 2026</span>
+        </li>
+        <li>
+          <a href="https://arxiv.org/abs/2312.10225" rel="noopener" target="_blank"><strong>Customizing Large Language Models for Business Context: Framework and Experiments</strong></a><br />
+          <span class="pub-authors">Wen Wang, Zhenyue Zhao, Tianshu Sun</span><br />
+          <span class="pub-venue"><em>arXiv preprint</em> arXiv:2312.10225, 2023</span>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section">
+      <div class="section-title"><h2>Featured Publications</h2></div>
+      <ol class="pub-list">
+        <li>
+          <a href="https://www.sciencedirect.com/science/article/pii/S1751157719301889" rel="noopener" target="_blank"><strong>An investigation of the relationship between scientists' mobility to/from China and their research performance</strong></a><br />
+          <span class="pub-authors">Zhenyue Zhao, Yi Bu, Lele Kang, Chao Min, Yiyang Bian, Li Tang, Jiang Li</span><br />
+          <span class="pub-venue"><em>Journal of Informetrics</em>, 14(2), 101037, 2020</span>
+        </li>
+        <li>
+          <a href="https://www.sciencedirect.com/science/article/pii/S0306457321001497" rel="noopener" target="_blank"><strong>Characterizing scientists leaving science before their time: Evidence from mathematics</strong></a><br />
+          <span class="pub-authors">Zhenyue Zhao, Yi Bu, Jiang Li</span><br />
+          <span class="pub-venue"><em>Information Processing &amp; Management</em>, 58(5), 102661, 2021</span>
+        </li>
+        <li>
+          <a href="https://asistdl.onlinelibrary.wiley.com/doi/abs/10.1002/asi.24699" rel="noopener" target="_blank"><strong>Rethinking the open access citation advantage: Evidence from the "reverse-flipping" journals</strong></a><br />
+          <span class="pub-authors">Wei Ming, Zhenyue Zhao</span><br />
+          <span class="pub-venue"><em>Journal of the Association for Information Science and Technology</em>, 73(11), 1608–1620, 2022</span>
+        </li>
+      </ol>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Zhenyue Zhao. Built with plain HTML + CSS. Hosted on GitHub Pages.</p>
+  </footer>
+
+  <script>
+  (function(){
+    const btn = document.getElementById('nav-toggle');
+    const menu = document.getElementById('nav-menu');
+    btn.addEventListener('click', function(){
+      const expanded = this.getAttribute('aria-expanded') === 'true';
+      this.setAttribute('aria-expanded', String(!expanded));
+      menu.classList.toggle('is-open');
+    });
+  })();
+  document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
