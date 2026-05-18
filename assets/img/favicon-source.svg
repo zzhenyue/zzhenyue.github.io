@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+  <title>ZZ monogram</title>
+  <g id="Background" inkscape:label="Background">
+    <rect id="Tile" width="64" height="64" rx="12" fill="#B31B1B"/>
+  </g>
+  <g id="Monogram" inkscape:label="Monogram" fill="#ffffff">
+    <path id="Z1-lower-left" d="M15 23 H45 V29 L21 47 H45 V53 H15 V47 L39 29 H15 Z"/>
+    <path id="Z2-upper-right" d="M19 11 H49 V17 L25 35 H49 V41 H19 V35 L43 17 H19 Z"/>
+  </g>
+</svg>
