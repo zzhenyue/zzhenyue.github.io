@@ -200,6 +200,12 @@ a:hover, a:focus {
   box-shadow: var(--shadow);
 }
 .hero h1 { margin-bottom: var(--space-xs); }
+.hero .hero-aka {
+  margin: 0 0 var(--space-sm);
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-style: italic;
+}
 .hero .lead {
   font-size: 1.1rem;
   color: var(--text-soft);
